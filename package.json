@@ -8,7 +8,7 @@
   },
   "files": [
     "readme.md",
-    "dist"
+    "dist/**/*"
   ],
   "exports": {
     "types": "./dist/types/index.d.ts",
@@ -28,6 +28,10 @@
     "lint:fix": "npm run lint -- --fix",
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "checks": "npm run lint && npm run typecheck",
+    "prepublishOnly": "npm run checks",
+    "prepare": "npm run build",
+    "preversion": "npm run checks",
+    "version": "git add -A src",
     "postversion": "git push && git push --tags"
   },
   "repository": {
