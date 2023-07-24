@@ -1,0 +1,7 @@
+{
+  "extends": "@aboutbits/eslint-config/ts",
+  "parserOptions": {
+    "project": true
+  },
+  "ignorePatterns": ["node_modules", "dist"]
+}
