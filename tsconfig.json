@@ -1,0 +1,13 @@
+{
+  "extends": "@aboutbits/ts-config",
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "removeComments": false
+  },
+  "include": [
+    "src"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "@aboutbits/ts-utils",
+  "version": "0.0.1",
+  "description": "AboutBits' TypeScript utilities",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "readme.md",
+    "dist/**/*"
+  ],
+  "exports": {
+    "types": "./dist/types/index.d.ts",
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "engines": {
+    "npm": ">=8",
+    "node": ">=16"
+  },
+  "scripts": {
+    "build": "rimraf dist && npm run build:types && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:types": "tsc -p tsconfig.types.json",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aboutbits/ts-utils"
+  },
+  "keywords": [
+    "ts-utils",
+    "utils",
+    "typescript"
+  ],
+  "author": "AboutBits",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aboutbits/ts-utils/issues"
+  },
+  "homepage": "https://github.com/aboutbits/ts-utils",
+  "prettier": "@aboutbits/prettier-config",
+  "dependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@aboutbits/prettier-config": "^1.6.0",
+    "@aboutbits/ts-config": "^1.1.0",
+    "rimraf": "^5.0.1"
+  }
+}
