@@ -2,10 +2,26 @@
   "name": "@aboutbits/ts-utils",
   "version": "0.1.4",
   "description": "AboutBits' TypeScript utilities",
+  "author": "AboutBits",
+  "license": "MIT",
+  "homepage": "https://github.com/aboutbits/ts-utils",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aboutbits/ts-utils"
+  },
+  "bugs": {
+    "url": "https://github.com/aboutbits/ts-utils/issues"
+  },
+  "keywords": [
+    "ts-utils",
+    "utils",
+    "typescript"
+  ],
   "private": false,
   "publishConfig": {
     "access": "public"
   },
+  "prettier": "@aboutbits/prettier-config",
   "files": [
     "readme.md",
     "dist/**/*"
@@ -36,22 +52,6 @@
     "version": "git add -A src",
     "postversion": "git push && git push --tags"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aboutbits/ts-utils"
-  },
-  "keywords": [
-    "ts-utils",
-    "utils",
-    "typescript"
-  ],
-  "author": "AboutBits",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/aboutbits/ts-utils/issues"
-  },
-  "homepage": "https://github.com/aboutbits/ts-utils",
-  "prettier": "@aboutbits/prettier-config",
   "dependencies": {
     "typescript": "^5.0.0"
   },
