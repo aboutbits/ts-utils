@@ -1,4 +1,16 @@
-node_modules
-dist
+# Basic
+.DS_Store
+
+# IDE
+/.idea
+/.vscode
+
+# Project
+/node_modules
+
+# Build
+/dist
 *.tsbuildinfo
+
+# Cache
 .eslintcache
