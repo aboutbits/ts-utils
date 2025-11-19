@@ -58,8 +58,8 @@
   },
   "devDependencies": {
     "@aboutbits/eslint-config": "^2.1.1",
-    "@aboutbits/prettier-config": "^1.6.0",
-    "@aboutbits/ts-config": "^1.1.2",
+    "@aboutbits/prettier-config": "^2.0.2",
+    "@aboutbits/ts-config": "^1.1.16",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "eslint": "^8.45.0",
     "eslint-plugin-import": "^2.27.5",
