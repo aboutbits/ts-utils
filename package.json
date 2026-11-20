@@ -23,29 +23,29 @@
     "access": "public"
   },
   "prettier": "@aboutbits/prettier-config",
-  "files": [
-    "readme.md",
-    "dist/**/*"
-  ],
+  "sideEffects": false,
+  "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js"
-    }
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
   },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
   "engines": {
     "npm": ">=10",
-    "node": ">=18"
+    "node": ">=26"
   },
   "scripts": {
-    "build": "rimraf dist && npm run build:types && npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc -p tsconfig.esm.json",
-    "build:cjs": "tsc -p tsconfig.cjs.json",
-    "build:types": "tsc -p tsconfig.types.json",
+    "build": "tsdown",
     "lint": "eslint --cache",
     "lint:fix": "npm run lint -- --fix",
-    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "typecheck": "tsc --noEmit",
     "checks": "npm run lint && npm run typecheck",
     "prepublishOnly": "npm run checks",
     "prepare": "npm run build",
@@ -53,16 +53,14 @@
     "version": "git add -A src",
     "postversion": "git push && git push --tags"
   },
-  "dependencies": {
-    "typescript": "^5.0.0"
-  },
   "devDependencies": {
-    "@aboutbits/eslint-config": "^5.1.0",
+    "@aboutbits/eslint-config": "^6.2.0",
     "@aboutbits/prettier-config": "^2.0.2",
-    "@aboutbits/ts-config": "^1.1.16",
-    "@types/node": "^22.19.21",
+    "@aboutbits/ts-config": "^1.2.1",
+    "@types/node": "^26.6.6",
     "eslint": "^9.39.0",
     "prettier": "^3.0.0",
-    "rimraf": "^5.0.1"
+    "tsdown": "^0.23.7",
+    "typescript": "^6.0.3"
   }
 }
