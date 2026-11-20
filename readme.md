@@ -13,6 +13,11 @@ Install the package:
 npm i -D @aboutbits/ts-utils
 ```
 
+Requirements:
+
+- The package is ESM only. It needs Node.js 26 or later, or a bundler that supports package `exports`.
+- TypeScript projects need `moduleResolution` set to `node16`, `nodenext` or `bundler`.
+
 Import the utility of your choice:
 
 ```ts
