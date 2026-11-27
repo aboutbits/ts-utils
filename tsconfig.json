@@ -1,4 +1,14 @@
 {
   "extends": "@aboutbits/ts-config",
-  "include": ["src"]
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": true,
+    "declaration": true,
+    "skipLibCheck": true
+  },
+  "include": ["src", "tsdown.config.ts"],
+  "exclude": ["node_modules"]
 }

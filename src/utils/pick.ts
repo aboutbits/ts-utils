@@ -1,4 +1,4 @@
-import { DistributivePick } from '../types'
+import type { DistributivePick } from '../types'
 
 export function pick<
   T extends Record<PropertyKey, unknown>,
